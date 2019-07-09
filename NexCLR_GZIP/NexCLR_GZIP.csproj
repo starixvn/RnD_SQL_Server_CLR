@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8515E32C-0987-41C5-BC1A-9B5A0BA30EC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NexCLR_GZIP</RootNamespace>
+    <AssemblyName>NexCLR_GZIP</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gzip.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharpZipLibLite\Checksums\Adler32.cs" />
+    <Compile Include="SharpZipLibLite\Checksums\IChecksum.cs" />
+    <Compile Include="SharpZipLibLite\SharpZipBaseException.cs" />
+    <Compile Include="SharpZipLibLite\StaticClasses.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Deflater.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Inflater.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="SharpZipLibLite\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="SharpZipLibLite\Zip\ZipException.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
